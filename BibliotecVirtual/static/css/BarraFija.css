@@ -1,0 +1,58 @@
+.a{
+    background-color: #E02422;
+    padding: 15px;
+    color:#E02422;
+}
+
+.b{
+    background-color: #F8C751;
+    padding: 0px;
+    color:#F8C751;
+}
+
+.c{
+    background-color: #0160A0;
+    padding: 15px;
+    color:#0160A0;
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    font-size:large;
+    margin:0;
+    color: black;
+    text-decoration: none;
+}
+
+
+.barra{
+    margin-left:none;
+    vertical-align: middle;
+}
+
+.barra li{
+    display: inline;
+    margin: 10px 40px;
+    vertical-align: middle;
+}
+
+.barra img{
+    margin-bottom: 3px;
+    margin-right: 200px;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.busqueda{
+    background:rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.boton{
+    background-color: rgba(255, 255, 255, 0);
+    margin:3px;
+    border: none;
+}

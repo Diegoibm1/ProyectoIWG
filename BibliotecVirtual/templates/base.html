@@ -7,5 +7,13 @@
 
 <body>
     {%include "Barrafija.html"%}
-    <h1> Biblioteca Virtual </h1>
+        <article>
+        <div class="container-article">
+            <div class="container-article">
+            {%for post in posts%}
+                <h2 class="titulo"><a href="#">{{post.titulo}}</a></h2>
+                <div class="archivo">{{post.archivo}}</div>
+            {%endfor%}
+        </div>
+        </article>
 </body>
