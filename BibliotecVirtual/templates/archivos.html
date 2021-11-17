@@ -1,11 +1,16 @@
+{% load static %}
+
 <head>
-    <title> xd </title>
+    <title>Subir archivo</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href='{% static "css/archivos.css" %}'/>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+{%include "Barrafija.html"%}
+    <h1> Subir archivo</h1>
     <form method="post" action="" enctype="multipart/form.data">
         {% csrf_token %}
         {{form.as_p}}

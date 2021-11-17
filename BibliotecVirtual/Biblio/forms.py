@@ -14,9 +14,9 @@ class UserRegisterForm(UserCreationForm):
 		help_texts = {k:"" for k in fields }
 
 class PostForm(forms.ModelForm):
-	ramo = forms.CharField(max_length=7, required=True)
+	ramo = forms.CharField(label="", max_length=7,widget=forms.Textarea(attrs={'rows':1,'placeholder': "Ingresar ramo en formato FIS-100", 'required': True,}) )
 	titulo = forms.CharField(label="", widget=forms.Textarea(attrs={ 'rows':1, 'placeholder': "Ingresa el titulo", 'required': True,}))
-	archivo = forms.FileField(required=False)
+	archivo = forms.FileField(label="", required=False)
 	
 	class Meta:
 		model = Post
