@@ -16,7 +16,7 @@ class UserRegisterForm(UserCreationForm):
 class PostForm(forms.ModelForm):
 	ramo = forms.CharField(max_length=7, required=True)
 	titulo = forms.CharField(label="", widget=forms.Textarea(attrs={ 'rows':1, 'placeholder': "Ingresa el titulo", 'required': True,}))
-	archivo = forms.FileField(required=True)
+	archivo = forms.FileField(required=False)
 	
 	class Meta:
 		model = Post
