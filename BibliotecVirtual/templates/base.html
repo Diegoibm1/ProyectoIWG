@@ -12,7 +12,7 @@
             <div class="container-article">
             {%for post in posts%}
                 <h2 class="titulo"><a href="#">{{post.titulo}}</a></h2>
-                <div class="archivo">{{post.archivo}}</div>
+                <a class="archivo" href={{post.archivo.url}} download> Descargar </a>
             {%endfor%}
         </div>
         </article>

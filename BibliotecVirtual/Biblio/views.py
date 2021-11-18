@@ -15,17 +15,20 @@ def fis110(request):
     context= {'posts': posts}
     return render(request,"base.html",context)
 
-
 def register(request):
 	if request.method == 'POST':
-		form = UserRegisterForm(request.POST)
+		print(request)
+		form = UserCreationForm(request.POST)
+		print(form)
 		if form.is_valid():
 			form.save()
 			username = form.cleaned_data['username']
 			messages.success(request, f'Usuario {username} creado')
-			return redirect('feed')
+			return redirect('http://127.0.0.1:8000/inicio/')
+		else:
+			print("\n no \n")
 	else:
-		form = UserRegisterForm()
+		form = UserCreationForm()
 
 	context = { 'form' : form }
 	return render(request, 'registro.html', context)
@@ -37,6 +40,7 @@ def post(request):
 		if form.is_valid():
 			post = form.save(commit=False)
 			post.user = current_user
+			post.archivo = request.FILES["archivo"]
 			post.save()
 			messages.success(request, "Archivo subido")
 			return redirect('http://127.0.0.1:8000/inicio/')

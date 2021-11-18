@@ -12,7 +12,7 @@ class Profile(models.Model):
 
 class Post(models.Model):
     titulo=models.CharField(max_length=50)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='posts')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
     timestap = models.DateTimeField(default=timezone.now)
     ramo = models.CharField(max_length=7)
     archivo = models.FileField(upload_to="myfolder/", blank=True, null=True)
