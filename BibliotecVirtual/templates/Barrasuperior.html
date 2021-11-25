@@ -1,0 +1,24 @@
+{% load static %}
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href='{% static "css/BarraFija.css" %}'/>
+<script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="rojo"><img class="logo" src= '{% static "imagenes/Logo pagina.png" %}'></a>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/inicio/" class="nav-menu-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/archivos/" class="nav-menu-link">Archivos</a></li>
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/equipo/" class="nav-menu-link">Quienes somos</a></li>
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/ranking/" class="nav-menu-link">Ranking</a></li>
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/upload/" class="nav-menu-link">Subir archivo</a></li>
+                <li class="nav-menu-item"><a href="http://127.0.0.1:8000/login/" class="nav-menu-link">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+        <a class="azul"></a>
+    </header>
+</body>

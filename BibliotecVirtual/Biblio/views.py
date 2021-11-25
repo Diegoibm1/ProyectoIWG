@@ -6,14 +6,12 @@ from .forms import UserRegisterForm, PostForm
 # Create your views here.
 
 def inicio(request):
-    titulo = "Bienvenidos"
-    form = Post(request.FILES or None)
     return render(request,"base.html")
 
 def fis110(request):
     posts = Post.objects.all()
     context= {'posts': posts}
-    return render(request,"base.html",context)
+    return render(request,"ramos.html",context)
 
 def register(request):
 	if request.method == 'POST':

@@ -1,0 +1,22 @@
+{% load static %}
+<head>
+    <title> Biblioteca virtual </title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href='{% static "css/ramos.css" %}'/>
+</head>
+
+<body>
+    {%include "Barrasuperior.html"%}
+        <article>
+        <h1>Archivos</h1>
+        <div class="container-article">
+            {%for post in posts%}
+                <a class="archivo" href={{post.archivo.url}} download><li>{{post.titulo}}  ({{post.ramo}})</li></a>
+                <a class="datos">Subido por {{post.user}}<br></a>
+                
+            {%endfor%}
+        </div>
+        </article>
+</body>

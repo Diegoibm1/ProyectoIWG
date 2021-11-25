@@ -1,75 +1,65 @@
 *{
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  text-align: center;
 }
 
 form {
-    margin: 0;
-    padding: 40px;
-    font-size: 1rem;
+  margin: 0;
+  padding: 40px;
+  font-size: 1rem;
 }
 
 input {
-  width: 70%;
-  border: 0;
-  border-bottom: 3px solid #D3D8DC;
-  outline: 0;
-  background: #fff;
-  padding: 20px 0 4px;
-  margin: 0 0 20px;
-  color: #777B7E;
-}
-
-input.busqueda{
-    background:rgba(255, 255, 255, 0.596);
-    border-radius: 10px;
-    border: 3px solid black;
-    width: 300px;
-    height: 20px;
-    margin: 0;
-    font-size: medium;
+width: 70%;
+border: 0;
+border-bottom: 3px solid #D3D8DC;
+outline: 0;
+background: #fff;
+padding: 20px 0 4px;
+margin: 0 0 20px;
+color: #777B7E;
 }
 
 input:focus {
-  border-color: #0160A0;
-  color: #2C3238;
-  vertical-align: middle;
+border-color: #0160A0;
+color: #2C3238;
+vertical-align: middle;
 }
 
 textarea {
-  width: 70%;
-  border: 0;
-  border-bottom: 2px solid #D3D8DC;
-  outline: 0;
-  background: #fff;
-  padding: 20px 0 4px;
-  margin: 0 0 20px;
-  color: black;
+width: 70%;
+border: 0;
+border-bottom: 2px solid #D3D8DC;
+outline: 0;
+background: #fff;
+padding: 20px 0 4px;
+margin: 0 0 20px;
+color: black;
 }
 textarea:focus {
-  border-color: #0160A0;
-  color: black;
+border-color: #0160A0;
+color: black;
 }
 
 button#submit {
-  width: 70%;
-  padding: 20px 0;
-  text-align: center;
-  background: #0160A0;
-  color: #fff;
-  border: 0;
-  border-radius: 4px;
-  opacity: .8;
-  transition: .35s linear;
-  font-size: 20px;
+width: 70%;
+padding: 20px 0;
+text-align: center;
+background: #0160A0;
+color: #fff;
+border: 0;
+border-radius: 4px;
+opacity: .8;
+transition: .35s linear;
+font-size: 20px;
 }
 
 button#submit:hover {
-  opacity: 1;
+opacity: 1;
 }
 
 h1{
-    font-size: 42px;
-    margin-top: 30px;
+  font-size: 42px;
+  margin-top: 30px;
 }
