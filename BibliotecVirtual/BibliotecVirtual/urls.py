@@ -24,11 +24,13 @@ from django.contrib.auth.views import LoginView, LogoutView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', inicio),
-    path('archivos/', fis110),
+    path('ramos/', archivos),
     path('registro/', register, name="registro"),
     path('login/', LoginView.as_view(template_name="login.html"), name="login"),
     path('logout/', LogoutView.as_view(template_name="logout.html"), name="logout"),
     path('upload/', post),
+    path('ramos/<str:asignatura>/',VerArchivos),
+
 ]
 
 if settings.DEBUG:

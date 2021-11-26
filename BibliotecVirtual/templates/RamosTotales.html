@@ -1,23 +1,23 @@
 {% load static %}
 <head>
-    <title> Biblioteca virtual </title>
+    <title> Ramos </title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href='{% static "css/ramos.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css/ramostotales.css" %}'/>
 </head>
 
 <body>
     {%include "Barrasuperior.html"%}
         <article>
-        <a class="retroceso" href="http://127.0.0.1:8000/ramos/"><i class="fas fa-arrow-left"></i>  Volver atrás</a>
-        <h1>Archivos</h1>
+        <a class="retroceso" href="http://127.0.0.1:8000/inicio/"><i class="fas fa-arrow-left"></i>  Volver atrás</a>
+        <h1>Ramos</h1>
         <div class="container-article">
-            {%for post in posts%}
+            {%for ramo in ramos%}
                 <nav class="bloque">
-                    <a class="archivo" href={{post.archivo.url}} download><li>{{post.titulo}}  ({{post.ramo}})</li></a>
+                <a class="acceso-ramo" href='{{ramo}}/'><li><i class="fas fa-folder"></i>       {{ramo}} </li></a>
                 </nav>
             {%endfor%}
         </div>
-        </article>
+    </article>
 </body>

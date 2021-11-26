@@ -8,15 +8,10 @@ from .forms import UserRegisterForm, PostForm
 def inicio(request):
     return render(request,"base.html")
 
-def fis110(request):
-    posts = Post.objects.all()
-    context= {'posts': posts}
-    return render(request,"ramos.html",context)
-
 def register(request):
 	if request.method == 'POST':
 		print(request)
-		form = UserCreationForm(request.POST)
+		form = UserRegisterForm(request.POST)
 		print(form)
 		if form.is_valid():
 			form.save()
@@ -26,7 +21,7 @@ def register(request):
 		else:
 			print("\n no \n")
 	else:
-		form = UserCreationForm()
+		form = UserRegisterForm()
 
 	context = { 'form' : form }
 	return render(request, 'registro.html', context)
@@ -45,3 +40,14 @@ def post(request):
 	else:
 		form=PostForm()
 	return render(request, 'archivos.html', {'form': form})
+
+def VerArchivos(request,asignatura):
+    posts = Post.objects.all().filter(ramo=asignatura)
+    context= {'posts': posts}
+    return render(request,"ramos.html",context)
+
+def archivos(request):
+	ramos=list(Post.objects.values_list('ramo', flat=True).distinct())
+	print(ramos)
+	context={'ramos':ramos}
+	return render(request,"RamosTotales.html",context)

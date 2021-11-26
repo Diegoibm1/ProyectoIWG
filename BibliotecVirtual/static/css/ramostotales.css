@@ -23,7 +23,7 @@ body{
 h1{
     text-align: center;
     margin-top: 20px;
-    font-size: xx-large;
+    font-size: 40px;
 }
 
 .bloque{
@@ -35,14 +35,15 @@ h1{
     border-radius: 10px;
     margin: 20px 10px;
     text-align: center;
+    color: black;
+    font-size: large;
 }
 
 .bloque:hover{
     background-color: #0160A0;
     transition: 0.3s;
 }
-
-.archivo{
+.acceso-ramo{
     color: black;
     text-decoration: none;
     list-style: none;
@@ -51,7 +52,7 @@ h1{
     text-align: center;
 }
 
-.archivo:hover{
+.acceso-ramo:hover{
     color: white;
     transition: 0.3s;
 }

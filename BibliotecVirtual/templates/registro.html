@@ -9,15 +9,14 @@
 </head>
 
 <body>
-<form class="formulario" >
     <div class="contenedor">
         <h1><p>Registro</p></h1>
-        <form class="form" method="post">
+        <form class="form" method="post" action=".">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" id="submit">Registrarse</button>
         <div class="texto_fin">
-        <p>¿Ya tienes una cuenta?   <a class="link" href="http://127.0.0.1:8000/login/">Iniciar sesión</P>
+        <p>¿Ya tienes una cuenta?  <a class="link" href="http://127.0.0.1:8000/login/">Iniciar sesión</P>
         </div>
         </form>
     </div>
@@ -29,5 +28,4 @@
 		</div>
 		{% endfor %}
 	{% endif %}
-</form>
 </body>
