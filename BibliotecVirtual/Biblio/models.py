@@ -16,6 +16,7 @@ class Post(models.Model):
     timestap = models.DateTimeField(default=timezone.now)
     ramo = models.CharField(max_length=7)
     archivo = models.FileField(upload_to="myfolder/", blank=True, null=True)
+    likes = models.ManyToManyField(User, related_name="UserPost")
     
 
     def __str__(self):
