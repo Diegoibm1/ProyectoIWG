@@ -1,9 +1,33 @@
 body{
     font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
     text-align: center;
-    box-sizing:border-box;
+  }
+
+.titulo{
+    text-align: center;
 }
+.Bloque{
+    width: 400px;
+    height: 100px;
+    background-color:black;
+    margin:10px;
+    box-sizing: content-box;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.archivo{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+}
+
 .retroceso{
     margin-top: 6px;
     display: block;
@@ -14,44 +38,28 @@ body{
     line-height: 30px;
     text-align: center;
     border-radius: 5px;
-}
+  }
 
-.retroceso:hover{
-    background-color:rgba(128, 128, 128, 0.151);
-}
-
-h1{
+.boton-like{
+    background-color:rgba(241, 237, 237, 0.637);
     text-align: center;
-    margin-top: 20px;
-    font-size: xx-large;
-}
-
-.bloque{
-    display: inline-block;
-    background-color:#d1cccca2;
-    width: 400px;
-    height: 80px;
-    border: 3px solid black;
+    width: 95%;
+    height: 35%;
+    font-size: 20px;
+    vertical-align: text-bottom;
+    border: none;
     border-radius: 10px;
-    margin: 20px 10px;
-    text-align: center;
+    color: white;
 }
 
-.bloque:hover{
-    background-color: #0160A0;
-    transition: 0.3s;
-}
-
-.archivo{
-    color: black;
-    text-decoration: none;
-    list-style: none;
-    line-height: 80px;
-    vertical-align: middle;
-    text-align: center;
+.boton-like:hover{
+    background: rgba(255, 255, 255, 0.74);
+    color: #0160A0;
+    transition: 0.5s;
 }
 
 .archivo:hover{
+    font-size: 18px;
     color: white;
-    transition: 0.3s;
+    transition: 0.4s;
 }

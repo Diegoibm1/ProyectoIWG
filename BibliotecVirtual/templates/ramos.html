@@ -9,15 +9,22 @@
 
 <body>
     {%include "Barrasuperior.html"%}
-        <article>
-        <a class="retroceso" href="http://127.0.0.1:8000/ramos/"><i class="fas fa-arrow-left"></i>  Volver atrás</a>
-        <h1>Archivos</h1>
-        <div class="container-article">
-            {%for post in posts%}
-                <nav class="bloque">
-                    <a class="archivo" href={{post.archivo.url}} download><li>{{post.titulo}}  ({{post.ramo}})</li></a>
-                </nav>
-            {%endfor%}
+    <a class="retroceso" href="http://127.0.0.1:8000/ramos/"><i class="fas fa-arrow-left"></i>  Volver atrás</a>
+    <h1 class="titulo">Archivos</h1>
+    <div class="archivos">
+        {%for post in posts%}
+        <div class="Bloque">
+            <a class="archivo" href={{post.archivo.url}} download><li>{{post.titulo}}  ({{post.ramo}})</li></a>
+            <form class="formulario-likes" method="post" action=".">
+                {% csrf_token %}
+                <input class="boton-like" type="number" value="{{post.id}}" hidden name="post"></input>
+                {%if user in post.likes.all%}
+                    <button class="boton-like" type="submit" id="submit" style="color:white;background:#0160A0;border:black solid 3px;"><i class="fas fa-thumbs-up"></i>          {{post.likes.all.count}}</button>
+                {%else%}
+                    <button class="boton-like" type="submit" id="submit"><i class="fas fa-thumbs-up"></i>          {{post.likes.all.count}}</button>
+                {%endif%}
+            </form>
         </div>
-        </article>
+        {%endfor%}
+    </div>
 </body>

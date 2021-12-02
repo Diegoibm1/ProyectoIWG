@@ -20,6 +20,7 @@ body{
   box-sizing: border-box;
   padding: 70px 30px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .register-box .avatar{
@@ -77,3 +78,4 @@ body{
   color: white;
   text-align: center;
 }
+
