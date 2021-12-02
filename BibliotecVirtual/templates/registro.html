@@ -9,23 +9,16 @@
 </head>
 
 <body>
-    <div class="contenedor">
-        <h1><p>Registro</p></h1>
-        <form class="form" method="post" action=".">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" id="submit">Registrarse</button>
-        <div class="texto_fin">
-        <p>¿Ya tienes una cuenta?  <a class="link" href="http://127.0.0.1:8000/login/">Iniciar sesión</P>
-        </div>
-        </form>
+    <div class="register-box">
+        <img class="avatar" src='{% static "imagenes/Logo pagina.png" %}' alt="Logo">
+        <h1 class="titulo">Registro</h1>
+            <form class="form" method="post" action=".">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" id="submit">Registrarse</button>
+                <div class="texto_fin">
+                    <p>¿Ya tienes una cuenta?  <a class="link" href="http://127.0.0.1:8000/login/">Iniciar sesión</P>
+                </div>
+            </form>
     </div>
-
-    {% if messages %}
-		{% for message in messages %}
-		<div class="notification {{ message.tags}}">
-			{{ message }}
-		</div>
-		{% endfor %}
-	{% endif %}
 </body>

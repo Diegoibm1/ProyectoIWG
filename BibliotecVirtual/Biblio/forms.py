@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from .models import Post
 
 class UserRegisterForm(UserCreationForm):
-	email = forms.EmailField()
+	email = forms.EmailField(label="Ingresar email")
 	password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
 	password2 = forms.CharField(label='Confirma Contraseña', widget=forms.PasswordInput)
 
