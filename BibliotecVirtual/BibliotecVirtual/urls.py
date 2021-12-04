@@ -30,6 +30,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name="logout.html"), name="logout"),
     path('upload/', post),
     path('ramos/<str:asignatura>/',VerArchivos),
+    path('ranking/',ranking),
+    path('equipo/',equipo),
 
 ]
 

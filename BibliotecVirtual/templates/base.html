@@ -3,12 +3,24 @@
 <head>
     <title> Biblioteca virtual </title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href='{% static "css/principal.css" %}'/>
 </head>
 
 <body>
     {%include "Barrasuperior.html"%}
-    <h1>Bienvenidos</h1>
+    <main>
+        <section class="banner">
+            <img class="imagen" src= '{% static "imagenes/img-principal.jpg" %}'>
+            <div class="contenedor">
+                <h2 class="titulo">Biblioteca Virtual</h2>
+                <p class="subtexto">Estudiar nunca habia sido tan fácil</p>
+                <div class="Mensaje">
+                    <p>Encuentra y comparte los archivos que quieras</p>
+                    <p>Toda la información que necesitas en tan solo unos clicks</p>
+                </div>
+            </div>
+    </section>
+    </main>
 </body>

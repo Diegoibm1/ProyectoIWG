@@ -9,6 +9,8 @@ from .forms import UserRegisterForm, PostForm
 def inicio(request):
     return render(request, "base.html")
 
+def equipo(request):
+    return render(request, "equipo.html")
 
 def register(request):
     if request.method == 'POST':
@@ -46,15 +48,15 @@ def post(request):
 
 
 def VerArchivos(request, asignatura):
-	if request.method == 'POST':
-		post_liked=Post.objects.get(id=request.POST.get('post'))
-		if request.user in post_liked.likes.all():
-			post_liked.likes.remove(request.user)
-		else:
-			post_liked.likes.add(request.user)
-	posts = Post.objects.all().filter(ramo=asignatura)
-	context = {'posts': posts,'user':request.user}
-	return render(request, "ramos.html", context)
+    if request.method == 'POST':
+        post_liked = Post.objects.get(id=request.POST.get('post'))
+        if request.user in post_liked.likes.all():
+            post_liked.likes.remove(request.user)
+        else:
+            post_liked.likes.add(request.user)
+    posts = Post.objects.all().filter(ramo=asignatura)
+    context = {'posts': posts, 'user': request.user}
+    return render(request, "ramos.html", context)
 
 
 def archivos(request):
@@ -62,6 +64,12 @@ def archivos(request):
     context = {'ramos': ramos}
     return render(request, "RamosTotales.html", context)
 
+
 def ranking(request):
-	context={}
-	return render(request, "Ranking.html", context)
+    usuarios = list(Post.objects.values_list('user', flat=True).distinct())
+    post = list(Post.objects.values_list('likes',flat=True).distinct())
+    print(usuarios)
+    print(post)
+    context = {}
+    return render(request, "ranking.html", context)
+

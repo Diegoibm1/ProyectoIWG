@@ -1,8 +1,67 @@
+{% load static %}
+
 <head>
     <title> Biblioteca virtual </title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/08f364107f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href='{% static "css/equipo.css" %}'/>
 </head>
 
-<h1>Equipo de trabajo</h1>
+<body>
+    {%include "Barrasuperior.html"%}
+        <div class="container">
+            <div class="card">
+                <div class="content-top">
+                    <img class="logo" src= '{% static "imagenes/Foto-Diego." %}'>
+                    <h2>Diego Bahamondes</h2>
+                    <h3>Creador</h3>
+                    <p>Estudiante de primer año de Ingeniría Civil Informática</p>
+                </div>
+                <div class="content-bottom">
+                    <div class="redes">
+                        <p><i class="far fa-envelope"></i>   diego.bahamondes@usm.cl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content-top">
+                    <img class="logo" src= ''>
+                    <h2>Pablo Guzmán</h2>
+                    <h3>Creador</h3>
+                    <p>Estudiante de primer año de Ingeniría Civil Informática</p>
+                </div>
+                <div class="content-bottom">
+                    <div class="redes">
+                        <p><i class="far fa-envelope"></i>   pablo.guzman@usm.cl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content-top">
+                    <img class="logo" src= ''>
+                    <h2>Maximiliano Duarte</h2>
+                    <h3>Creador</h3>
+                    <p>Estudiante de primer año de Ingeniría Civil Informática</p>
+                </div>
+                <div class="content-bottom">
+                    <div class="redes">
+                        <p><i class="far fa-envelope"></i>   maximiliano.duarte@usm.cl</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content-top">
+                    <img class="logo" src= ''>
+                    <h2>Magno Rodríguez</h2>
+                    <h3>Creador</h3>
+                    <p>Estudiante de primer año de Ingeniría Civil Informática</p>
+                </div>
+                <div class="content-bottom">
+                    <div class="redes">
+                        <p><i class="far fa-envelope"></i>   magno.rodriguez@usm.cl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>

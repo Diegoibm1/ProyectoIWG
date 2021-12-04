@@ -1,0 +1,65 @@
+body{
+    margin:auto;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.container{
+    padding: 100px 0px;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.918);
+    padding: 30px 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+    width: 270px;
+    height: 80%;
+    box-shadow: -5px 10px 20px black;
+}
+
+.content-top img{
+    height: 200px;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.content-top h2{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.content-top h3{
+    margin-top: 14px;
+    font-weight: 300;
+}
+
+.redes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.titulo{
+    font-size: 50px;
+    color: black;
+    margin-top: 20px;
+}
