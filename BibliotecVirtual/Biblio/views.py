@@ -9,8 +9,10 @@ from .forms import UserRegisterForm, PostForm
 def inicio(request):
     return render(request, "base.html")
 
+
 def equipo(request):
     return render(request, "equipo.html")
+
 
 def register(request):
     if request.method == 'POST':
@@ -66,10 +68,25 @@ def archivos(request):
 
 
 def ranking(request):
-    usuarios = list(Post.objects.values_list('user', flat=True).distinct())
-    post = list(Post.objects.values_list('likes',flat=True).distinct())
-    print(usuarios)
-    print(post)
-    context = {}
+    posts = Post.objects.all()
+    usuarios = {}
+    for post in posts:
+        if post.user in post.likes.all():
+            if post.user not in usuarios:
+                usuarios[post.user]=0
+            usuarios[post.user]+=(post.likes.count())
+    lista=[]
+    for persona in usuarios:
+        likes=usuarios[persona]
+        tupla=(likes,persona)
+        lista.append(tupla)
+    lista.sort()
+    lista.reverse()
+    lista=lista[:10]
+    d={}
+    for tupla in lista:
+        user=tupla[1]
+        likes=tupla[0]
+        d[user]=likes
+    context = {'lista':d}
     return render(request, "ranking.html", context)
-

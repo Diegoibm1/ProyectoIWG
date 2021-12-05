@@ -15,6 +15,7 @@
         {%for post in posts%}
         <div class="Bloque">
             <a class="archivo" href={{post.archivo.url}} download><li>{{post.titulo}}  ({{post.ramo}})</li></a>
+            <p class="creador">Subido por {{post.user}}</p>
             <form class="formulario-likes" method="post" action=".">
                 {% csrf_token %}
                 <input class="boton-like" type="number" value="{{post.id}}" hidden name="post"></input>

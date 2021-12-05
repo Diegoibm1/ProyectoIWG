@@ -9,7 +9,9 @@
 
 <body>
     {%include "Barrasuperior.html"%}
-    {%for post in post_liked%}
-        <p>{{post.user}}</p>
+    <h1 class="titulo">TOP 10</h1>
+    <h2 class="subtitulo">A continuación verás a los usuarios con mas likes</h2>
+    {%for user in lista%}
+        <li class="usuarios">{{user}}</li>
     {%endfor%}
 </body>

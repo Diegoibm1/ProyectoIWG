@@ -47,7 +47,12 @@ body{
 }
 
 .content-top h3{
-    margin-top: 14px;
+    margin-top: 0px;
+    font-weight: 300;
+}
+
+.content-top p{
+    margin-top: 20px;
     font-weight: 300;
 }
 
@@ -62,4 +67,8 @@ body{
     font-size: 50px;
     color: black;
     margin-top: 20px;
+}
+
+.logo{
+    margin-left: -30px;
 }

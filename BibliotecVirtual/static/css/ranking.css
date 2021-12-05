@@ -1,0 +1,29 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+  }
+  
+.titulo{
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.subtitulo{
+    margin-bottom: 20px;
+    font-size: 20px
+}
+
+.usuarios{
+    list-style:decimal;
+    width: 50%;
+    height: 50px;
+    margin-bottom: 3px;
+    box-sizing: content-box;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 25%;
+    line-height: 50px;
+    background-color:#d1cccca2;
+    font-size: 25px;
+}

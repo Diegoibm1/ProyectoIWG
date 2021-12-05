@@ -22,10 +22,10 @@ body{
     color: white;
     text-decoration: none;
     list-style: none;
-    line-height: 50px;
-    vertical-align: middle;
+    line-height: 35px;
     text-align: center;
     font-size: 15px;
+    margin-bottom: 0;
 }
 
 .retroceso{
@@ -62,4 +62,9 @@ body{
     font-size: 18px;
     color: white;
     transition: 0.4s;
+}
+
+.creador{
+    color: white;
+    margin-top: 0;
 }
