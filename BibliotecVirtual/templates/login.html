@@ -10,7 +10,7 @@
 
 <body>
     <div class="login-box">
-        <a href="http://127.0.0.1:8000" ><img class="avatar" src='{% static "imagenes/Logo pagina.png" %}' alt="Logo"></a>
+        <a href="/" ><img class="avatar" src='{% static "imagenes/Logo pagina.png" %}' alt="Logo"></a>
         <h1 class="titulo">Login</h1>
         <form class="form" method="post">
             {% csrf_token %}
@@ -18,7 +18,7 @@
             <button type="submit" id="submit">Ingresar</button>
             <div class="texto_fin">
                 <p>¿No tienes una cuenta?</p>
-                <p><a class="link" href="http://127.0.0.1:8000/registro/">Registrate</a></p>
+                <p><a class="link" href="/registro/">Registrate</a></p>
             </div>
         </form>
     </div>
